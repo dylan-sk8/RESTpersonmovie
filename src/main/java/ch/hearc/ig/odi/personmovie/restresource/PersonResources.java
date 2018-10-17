@@ -26,7 +26,7 @@ public class PersonResources {
     @GET
     @Path("/{id}")
     @Produces(MediaType.APPLICATION_JSON)
-    public Person getPeopleById(@PathParam("id") Long id) {
+    public Person getPersonById(@PathParam("id") Long id) {
         return this.persistanceService.getPersonById(id);
     }
 

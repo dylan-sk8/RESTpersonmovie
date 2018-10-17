@@ -81,6 +81,11 @@ public class PersistanceService {
         return new ArrayList<>(this.movies.values());
     }
 
+    public void addMovie(Long id, String name, String producer) {
+        Movie movie = new Movie(id, name, producer);
+        this.movies.put(movie.getId(), movie);
+    }
+
     public void deleteMovieById(Long id) {
         this.movies.remove(new Long(id));
     }
